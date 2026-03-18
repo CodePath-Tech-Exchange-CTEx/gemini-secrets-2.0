@@ -30,18 +30,18 @@ Build and deploy to Cloud Run:
 
 ```bash
 gcloud builds submit --tag gcr.io/YOUR_PROJECT/gemini-secrets
-
 gcloud run deploy gemini-secrets \
-  --image gcr.io/YOUR_PROJECT/gemini-secrets \
-  --platform managed \
+  --source . \
+  --project YOUR_PROJECT \
   --region us-central1 \
-  --allow-unauthenticated
+  --allow-unauthenticated \
+  --set-env-vars GOOGLE_CLOUD_PROJECT=YOUR_PROJECT
 ```
 
 ### Access Credentials
 
-- **Student password**: `LEARNINGLAB2024`  
-- **Instructor password**: `TEACHERMODE2026`  
+- **Student password**: `ise26`  
+- **Instructor password**: `leadteach`  
 
 ### Running the Classroom Activity
 
